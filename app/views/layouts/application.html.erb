@@ -11,9 +11,13 @@
     <%= stylesheet_pack_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body class='bg-gray-100 sm:p-4 border-red-500'>
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
+  <body class='bg-gray-100 border-red-500'>
+    <%= render NotificationComponent.new(notice: flash) %>
+
     <%= yield %>
+
+    <%# <% if Rails.env.development? %>
+    <%#   <%= console %>
+    <%# <% end %>
   </body>
 </html>
