@@ -10,23 +10,23 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 gem 'turbo-rails'
 gem 'stimulus-rails'
-gem "tailwindcss-rails", "~> 0.3.3"
-gem "view_component", require: "view_component/engine"
+gem 'tailwindcss-rails', '~> 0.3.3'
+gem 'view_component', require: 'view_component/engine'
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem "rspec-rails"
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem "ffaker"
+  gem 'ffaker'
 end
 
 group :development do
   gem 'web-console'
   gem 'rack-mini-profiler'
   gem 'listen'
-  gem "awesome_print"
+  gem 'awesome_print'
 end
 
 group :test do
