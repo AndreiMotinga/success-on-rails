@@ -24,9 +24,7 @@ group :development do
   gem 'web-console'
   gem 'rack-mini-profiler'
   gem 'listen'
-  gem 'spring'
   gem "awesome_print"
-  gem "spring-commands-rspec"
 end
 
 group :test do
