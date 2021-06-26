@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Run this script to deploy the app to Heroku.
+
+set -e
+
+# target="${1:-staging}"
+#
+# heroku run rails c --remote "$target"
+heroku run rails c
