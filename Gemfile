@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.6'
 
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
+gem 'redis', '~> 4.0'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
@@ -27,6 +28,8 @@ group :development do
   gem 'rack-mini-profiler'
   gem 'listen'
   gem 'awesome_print'
+  gem 'guard-rails', require: false
+  gem 'guard-livereload', '~> 2.5', require: false
 end
 
 group :test do
