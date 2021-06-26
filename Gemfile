@@ -10,9 +10,10 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 gem 'turbo-rails'
 gem 'stimulus-rails'
+gem "tailwindcss-rails", "~> 0.3.3"
+gem "view_component", require: "view_component/engine"
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "view_component", require: "view_component/engine"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
