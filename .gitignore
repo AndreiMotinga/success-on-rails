@@ -37,3 +37,7 @@ yarn-debug.log*
 
 # spec profiling file
 /spec/examples.txt
+
+/config/credentials/development.key
+
+/config/credentials/production.key
