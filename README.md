@@ -10,7 +10,6 @@ Authentication
   - add alpine
     - setup dropdown, modal examples
 
-
 Front End
   x UI framework - tailwind?
   - Landing
@@ -18,6 +17,7 @@ Front End
   - User settings
   x guard
   x ViewComponents
+
 
 Features/integraitions
   - file uploads
@@ -36,3 +36,11 @@ Devops
   - heroku staging -> prod pipeline
   - datadog.com logs
   - error reports. rollbar?
+
+Tools update CI
+  -     bin/rubocop --parallel
+  -     bin/stylelint
+  -     bin/prettier
+  -     bin/eslint
+  -     bin/bundler-audit --update
+  -     bin/brakeman -q -w2

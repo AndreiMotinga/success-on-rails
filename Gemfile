@@ -27,6 +27,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "rubocop"
   gem 'web-console'
   gem 'rack-mini-profiler'
   gem 'listen'
