@@ -7,6 +7,9 @@ Authentication
   - x devise
   - social logins. github, google, facebook
   - user impersonation
+  - add alpine
+    - setup dropdown, modal examples
+
 
 Front End
   x UI framework - tailwind?
@@ -29,6 +32,7 @@ Tests
 
 Devops
   - Ci GitHub action.
+  - Ci project management
   - heroku staging -> prod pipeline
   - datadog.com logs
   - error reports. rollbar?
