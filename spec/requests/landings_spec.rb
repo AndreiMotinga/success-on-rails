@@ -6,5 +6,9 @@ RSpec.describe "Landings", type: :request do
       get "/engineer-home"
       expect(response).to have_http_status(:success)
     end
+
+    it '1+1' do
+      expect(1).to eq 1
+    end
   end
 end

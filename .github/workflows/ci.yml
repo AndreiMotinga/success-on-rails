@@ -1,0 +1,41 @@
+name: Test
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+
+    services:
+      db:
+        image: postgres:11-alpine
+        ports: ["5432:5432"]
+        env:
+          POSTGRES_PASSWORD: password # required by image
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Setup Node for Yarn caching
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'yarn'
+      - name: Install JS packages
+        run: yarn install --pure-lockfile
+
+      - name: Setup test database
+        run: bin/rails db:prepare
+
+      - name: Run Tests
+        run: bin/rake
+
